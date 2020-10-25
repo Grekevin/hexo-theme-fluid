@@ -10,12 +10,15 @@ const url = require('url');
 hexo.extend.helper.register('export_config', function() {
   let { config, theme, fluid_version } = this;
   const exportConfig = {
-    hostname     : url.parse(config.url).hostname || config.url,
-    root         : config.root,
-    version      : fluid_version,
-    fancybox     : theme.fancybox,
-    lazyload     : theme.lazyload,
-    web_analytics: theme.web_analytics
+    hostname : url.parse(config.url).hostname || config.url,
+    root     : config.root,
+    version  : fluid_version,
+    typing   : theme.fun_features.typing,
+    toc      : theme.post.toc,
+    copycode : theme.code.copy_btn,
+    imagezoom: theme.post.image_zoom,
+    lazyload : theme.lazyload,
+    analytics: theme.web_analytics
   };
   return `<script id="fluid-configs">
     var Fluid = window.Fluid || {};

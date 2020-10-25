@@ -83,7 +83,7 @@
   }
 
   function addCount(Counter) {
-    var enableIncr = CONFIG.web_analytics.enable === true;
+    var enableIncr = CONFIG.analytics.enable === true;
     var getterArr = [];
     var incrArr = [];
 
@@ -145,9 +145,9 @@
     }
   }
 
-  var appId = CONFIG.web_analytics.leancloud.app_id;
-  var appKey = CONFIG.web_analytics.leancloud.app_key;
-  var serverUrl = CONFIG.web_analytics.leancloud.server_url;
+  var appId = CONFIG.analytics.leancloud.app_id;
+  var appKey = CONFIG.analytics.leancloud.app_key;
+  var serverUrl = CONFIG.analytics.leancloud.server_url;
 
   function fetchData(api_server) {
     var Counter = (method, url, data) => {
